@@ -3,22 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://example.org/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/awesome_article/</loc>
+    <loc>http://localhost:1313/posts/awesome_article/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/</loc>
+    <loc>http://localhost:1313/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/gallery/</loc>
+    <loc>http://localhost:1313/posts/gallery/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

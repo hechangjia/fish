@@ -107,7 +107,9 @@ This is an error!
 
 
 
-{{< article link="/posts/测试/" >}}
+{{< article link="/posts/gallery/" >}}
+
+
 
 
 

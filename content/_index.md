@@ -4,6 +4,24 @@ description: "这是往主页中添加内容的例子。"
 ---
 欢迎来到我的网站！我很高兴你的来访。
 
+
+
+
+
+{{< list limit=6  cardView=true >}}
+
+
+
+
+
+{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
+
+{{< github repo="hechangjia/hechangjia" >}}
+
+
+
+
+
 ## Hi there 👋 My name is HeChangjia
 ![](https://komarev.com/ghpvc/?username=hechangjia&color=green)
 ![](https://komarev.com/ghpvc/?username=hechangjia&abbreviated=true)

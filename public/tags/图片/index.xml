@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>图片 on 小镇错题家</title>
-    <link>https://example.org/tags/%E5%9B%BE%E7%89%87/</link>
+    <link>http://localhost:1313/tags/%E5%9B%BE%E7%89%87/</link>
     <description>Recent content in 图片 on 小镇错题家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <managingEditor>tushanhong613@gmail.com (贺昌嘉)</managingEditor>
     <webMaster>tushanhong613@gmail.com (贺昌嘉)</webMaster>
     <copyright>© 2025 贺昌嘉</copyright>
-    <atom:link href="https://example.org/tags/%E5%9B%BE%E7%89%87/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E5%9B%BE%E7%89%87/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>图库</title>
-      <link>https://example.org/posts/gallery/</link>
+      <link>http://localhost:1313/posts/gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>tushanhong613@gmail.com (贺昌嘉)</author>
-      <guid>https://example.org/posts/gallery/</guid>
+      <guid>http://localhost:1313/posts/gallery/</guid>
       <description></description>
       
     </item>
