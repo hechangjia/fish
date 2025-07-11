@@ -1,0 +1,7 @@
+[module]
+[module.hugoVersion]
+extended = true
+min = "0.137.0"
+max = "0.147.8"
+hasCJKLang = true
+googleAnalytics = "G-N0T0GKQ9L5"

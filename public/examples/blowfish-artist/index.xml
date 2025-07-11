@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blowfish Artist on 小镇错题家</title>
+    <link>http://localhost:1313/examples/blowfish-artist/</link>
+    <description>Recent content in Blowfish Artist on 小镇错题家</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>tushanhong613@gmail.com (贺昌嘉)</managingEditor>
+    <webMaster>tushanhong613@gmail.com (贺昌嘉)</webMaster>
+    <copyright>© 2025 贺昌嘉</copyright>
+    <lastBuildDate>Sun, 06 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/examples/blowfish-artist/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blowfish Artist</title>
+      <link>http://localhost:1313/examples/blowfish-artist/_index.it/</link>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/examples/blowfish-artist/_index.it/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Blowfish Artist</title>
+      <link>http://localhost:1313/examples/blowfish-artist/_index.ja/</link>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/examples/blowfish-artist/_index.ja/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

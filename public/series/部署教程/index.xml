@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>部署教程 on 小镇错题家</title>
+    <link>http://localhost:1313/series/%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 部署教程 on 小镇错题家</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>tushanhong613@gmail.com (贺昌嘉)</managingEditor>
+    <webMaster>tushanhong613@gmail.com (贺昌嘉)</webMaster>
+    <copyright>© 2025 贺昌嘉</copyright>
+    <atom:link href="http://localhost:1313/series/%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>欢迎来到 Blowfish</title>
+      <link>http://localhost:1313/docs/welcome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/welcome/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/welcome/featured.svg" />
+    </item>
+    
+    <item>
+      <title>安装和配置</title>
+      <link>http://localhost:1313/docs/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/installation/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/installation/featured.svg" />
+    </item>
+    
+    <item>
+      <title>入门指南</title>
+      <link>http://localhost:1313/docs/getting-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/getting-started/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/getting-started/featured.svg" />
+    </item>
+    
+    <item>
+      <title>配置</title>
+      <link>http://localhost:1313/docs/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/configuration/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/configuration/featured.svg" />
+    </item>
+    
+    <item>
+      <title>主页布局</title>
+      <link>http://localhost:1313/docs/homepage-layout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/homepage-layout/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/homepage-layout/featured.svg" />
+    </item>
+    
+    <item>
+      <title>简码</title>
+      <link>http://localhost:1313/docs/shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/shortcodes/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/shortcodes/featured.svg" />
+    </item>
+    
+    <item>
+      <title>Front Matter(文件头信息)</title>
+      <link>http://localhost:1313/docs/front-matter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/front-matter/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/front-matter/featured.svg" />
+    </item>
+    
+    <item>
+      <title>多创作者模式</title>
+      <link>http://localhost:1313/docs/multi-author/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/multi-author/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/multi-author/featured.svg" />
+    </item>
+    
+    <item>
+      <title>局部模板(Partials)</title>
+      <link>http://localhost:1313/docs/partials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/partials/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/partials/featured.svg" />
+    </item>
+    
+    <item>
+      <title>缩略图</title>
+      <link>http://localhost:1313/docs/thumbnails/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/thumbnails/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/thumbnails/featured.svg" />
+    </item>
+    
+    <item>
+      <title>内容示例</title>
+      <link>http://localhost:1313/docs/content-examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/content-examples/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/content-examples/featured.svg" />
+    </item>
+    
+    <item>
+      <title>系列</title>
+      <link>http://localhost:1313/docs/series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/series/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/series/featured.svg" />
+    </item>
+    
+    <item>
+      <title>进阶自定义</title>
+      <link>http://localhost:1313/docs/advanced-customisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/advanced-customisation/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/advanced-customisation/featured.svg" />
+    </item>
+    
+    <item>
+      <title>托管和部署</title>
+      <link>http://localhost:1313/docs/hosting-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/hosting-deployment/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/hosting-deployment/featured.svg" />
+    </item>
+    
+    <item>
+      <title>Firebase: 阅读量 &amp; 点赞量</title>
+      <link>http://localhost:1313/docs/firebase-views/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tushanhong613@gmail.com (贺昌嘉)</author>
+      <guid>http://localhost:1313/docs/firebase-views/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/firebase-views/featured.svg" />
+    </item>
+    
+  </channel>
+</rss>

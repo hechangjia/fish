@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-CN'
+title = '小镇错题家'
+subtitle = '你好,世界!'
+description = '中国式的西西弗斯'
+theme = 'blowfish'
