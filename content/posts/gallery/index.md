@@ -22,7 +22,18 @@ description: 这是专门用来展示图片的地方
 
 ## 嵌入视频
 
-<video controls width="80%">
+<video controls style="width: 80%;">
+  <source src="./gallery/TimeShiftSystems.mp4" type="video/mp4">
+</video>
+
+
+<style>
+  .my-video {
+    width: 300%;
+  }
+</style>
+
+<video controls class="my-video">
   <source src="./gallery/TimeShiftSystems.mp4" type="video/mp4">
 </video>
 
