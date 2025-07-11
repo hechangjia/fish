@@ -105,9 +105,10 @@
 
         <div class="article-content max-w-prose mb-20">
           {{ .Content }}
-          {{ if .Site.Config.Services.Disqus.Shortname }}
+          {{ partial "giscus.html" . }}
+          <!-- {{ if .Site.Config.Services.Disqus.Shortname }}
             {{ partial "disqus.html" . }}
-          {{ end }}
+          {{ end }} -->
           {{ $defaultReplyByEmail := .Site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
           {{ if $replyByEmail }}
