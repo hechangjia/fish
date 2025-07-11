@@ -113,7 +113,7 @@
     "keywords": ["gallery","图片"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2"
+    "wordCount": "11"
   }]
   </script>
 
@@ -762,7 +762,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="0001-01-01T00:00:00&#43;00:00">11 July 1010</time><span class="px-2 text-primary-500">&middot;</span><span>2 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+      <time datetime="0001-01-01T00:00:00&#43;00:00">11 July 1010</time><span class="px-2 text-primary-500">&middot;</span><span>11 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -1029,6 +1029,137 @@
 
     <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#嵌入pdf">嵌入PDF</a></li>
+    <li><a href="#嵌入视频">嵌入视频</a></li>
+    <li><a href="#图库">图库</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#嵌入pdf">嵌入PDF</a></li>
+    <li><a href="#嵌入视频">嵌入视频</a></li>
+    <li><a href="#图库">图库</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = true
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
+      
 
 
       <div class="min-w-0 min-h-0 max-w-fit">
@@ -1037,9 +1168,50 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <video controls width="80%">
+          
+<h2 class="relative group">嵌入PDF 
+    <div id="嵌入pdf" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%b5%8c%e5%85%a5pdf" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><strong>测试</strong>
+<a
+  href="gallery/%e7%ac%ac%e4%b8%80%e7%ab%a0.pdf">PDF</a>
+</p>
+<iframe 
+  src="gallery/第一章.pdf" 
+  width="200%" 
+  height="600px"
+>
+  <p>您的浏览器不支持PDF预览，请<a href="./assets/pdfs/第一章.pdf">下载文件</a></p>
+</iframe>
+
+<h2 class="relative group">嵌入视频 
+    <div id="嵌入视频" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%b5%8c%e5%85%a5%e8%a7%86%e9%a2%91" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<video controls width="80%">
   <source src="./gallery/TimeShiftSystems.mp4" type="video/mp4">
 </video>
+
+<h2 class="relative group">图库 
+    <div id="图库" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%9b%be%e5%ba%93" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
 <div id="gallery-4814c80fc91f20f9ebbc9be77e523536" class="gallery">
   
   
@@ -1133,26 +1305,6 @@
 
       
     
-      <button
-        type="button"
-        data-twe-target="#carousel-fd196f5dfbff452e0d0dbd5e0409907c"
-        data-twe-slide-to="4"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 4"></button>
-
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-fd196f5dfbff452e0d0dbd5e0409907c"
-        data-twe-slide-to="5"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 5"></button>
-
-      
-    
 
   </div>
   <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
@@ -1180,7 +1332,7 @@
         >
         <div class="ratio-21-9 single_hero_background">
           <img
-            src="/posts/gallery/gallery/TimeShiftSystems.mp4"
+            src="/posts/gallery/gallery/banner_1.jpg"
             class="block absolute top-0 object-cover w-full h-full nozoom"
             alt="carousel image 1">
         </div>
@@ -1196,7 +1348,7 @@
         >
         <div class="ratio-21-9 single_hero_background">
           <img
-            src="/posts/gallery/gallery/banner_1.jpg"
+            src="/posts/gallery/gallery/banner_2.jpg"
             class="block absolute top-0 object-cover w-full h-full nozoom"
             alt="carousel image 2">
         </div>
@@ -1212,41 +1364,9 @@
         >
         <div class="ratio-21-9 single_hero_background">
           <img
-            src="/posts/gallery/gallery/banner_2.jpg"
-            class="block absolute top-0 object-cover w-full h-full nozoom"
-            alt="carousel image 3">
-        </div>
-      </div>
-
-      
-    
-      <div
-        class="relative float-left -mr-[100%] 
-          hidden
-         w-full transition-transform duration-[2500ms] ease-in-out motion-reduce:transition-none"
-        data-twe-carousel-item
-        >
-        <div class="ratio-21-9 single_hero_background">
-          <img
             src="/posts/gallery/gallery/banner_3.jpg"
             class="block absolute top-0 object-cover w-full h-full nozoom"
-            alt="carousel image 4">
-        </div>
-      </div>
-
-      
-    
-      <div
-        class="relative float-left -mr-[100%] 
-          hidden
-         w-full transition-transform duration-[2500ms] ease-in-out motion-reduce:transition-none"
-        data-twe-carousel-item
-        >
-        <div class="ratio-21-9 single_hero_background">
-          <img
-            src="/posts/gallery/gallery/code.gif"
-            class="block absolute top-0 object-cover w-full h-full nozoom"
-            alt="carousel image 5">
+            alt="carousel image 3">
         </div>
       </div>
 

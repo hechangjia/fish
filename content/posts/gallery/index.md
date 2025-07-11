@@ -7,12 +7,26 @@ description: 这是专门用来展示图片的地方
 
 ---
 
+## 嵌入PDF
+
+**测试**
+[PDF](gallery/第一章.pdf)
+
+<iframe 
+  src="gallery/第一章.pdf" 
+  width="200%" 
+  height="600px"
+>
+  <p>您的浏览器不支持PDF预览，请<a href="./assets/pdfs/第一章.pdf">下载文件</a></p>
+</iframe>
+
+## 嵌入视频
 
 <video controls width="80%">
   <source src="./gallery/TimeShiftSystems.mp4" type="video/mp4">
 </video>
 
-
+## 图库
 
 {{< gallery >}}
   <img src="gallery/Manim.jpg"  />
@@ -33,7 +47,7 @@ description: 这是专门用来展示图片的地方
 {{< /gallery >}}
 
 
-{{< carousel images="gallery/*" aspectRatio="21-9" interval="2500" >}}
+{{< carousel images="gallery/*.jpg" aspectRatio="21-9" interval="2500" >}}
 
 
 
